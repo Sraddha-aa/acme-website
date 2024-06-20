@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ACME</title>
     <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://mojoview.com/client_data/e45307a73787cc9dd5d24232/script.js"></script> <!-- End cookieyes banner -->
+    <script>
+      document.addEventListener("cookieyes_banner_load", function (eventData) {
+        console.log("Banner load event:", eventData.detail);
+      }
+      document.addEventListener("cookieyes_consent_update", function (eventData) {
+        console.log("Consent update event:", eventData.detail);
+      }
+    </script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
